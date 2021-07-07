@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { Link, useHistory } from 'react-router-dom';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import './EditItem.css';
 
 const EditItem = (props) => {
   const [selectedItem, setSlectedItem] = useState({
@@ -28,10 +29,11 @@ const EditItem = (props) => {
   };
 
   return (
-    <Form onSubmit={onSubmit}>
+    <Form className="border p-4" onSubmit={onSubmit}>
       <FormGroup>
         <Label>Name</Label>
         <Input
+          className="mb-2"
           type="text"
           name="name"
           value={selectedItem.name}

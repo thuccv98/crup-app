@@ -3,6 +3,7 @@ import { GlobalContext } from '../context/GlobalState';
 import { Link, useHistory } from 'react-router-dom';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { v4 as uuidv4 } from 'uuid';
+import './AddItem.css';
 
 const AddItem = () => {
   const [name, setName] = useState('');
@@ -22,10 +23,11 @@ const AddItem = () => {
   };
 
   return (
-    <Form onSubmit={onSubmit}>
+    <Form className="border p-4" onSubmit={onSubmit}>
       <FormGroup>
         <Label>Name</Label>
         <Input
+          className="mb-2"
           type="text"
           value={name}
           onChange={onChange}

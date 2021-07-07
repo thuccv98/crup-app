@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem, Button } from 'reactstrap';
+import './ItemList.css';
 
 const ItemList = () => {
   const { items, removeItem } = useContext(GlobalContext);

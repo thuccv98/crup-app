@@ -7,7 +7,7 @@ import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div style={{ maxWidth: '30rem', margin: '4rem auto' }}>
+    <div className="app">
       <GlobalProvider>
         <Router>
           <Switch>
